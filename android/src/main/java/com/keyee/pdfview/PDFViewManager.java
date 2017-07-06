@@ -47,6 +47,8 @@ public class PDFViewManager extends SimpleViewManager<PDFView> implements OnPage
         if (pdfView == null){
             pdfView = new PDFView(context, null);
         }
+        com.github.barteksc.pdfviewer.util.Constants.THUMBNAIL_RATIO = 0.9f;
+        com.github.barteksc.pdfviewer.util.Constants.PRELOAD_COUNT = 20;
         return pdfView;
         //return new PDFView(context, null);
     }
