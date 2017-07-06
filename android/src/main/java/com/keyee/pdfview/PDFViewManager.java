@@ -56,7 +56,6 @@ public class PDFViewManager extends SimpleViewManager<PDFView> implements OnPage
     @Override
     public void onPageChanged(int page, int pageCount) {
         pageNumber = page;
-        showLog(format("%s %s / %s", filePath, page, pageCount));
     }
 
     @Override
@@ -72,7 +71,6 @@ public class PDFViewManager extends SimpleViewManager<PDFView> implements OnPage
     }
 
     private void display(boolean jumpToFirstPage) {
-        showLog(format("%s %s / %s", filePath, page, pageCount));
         pdfView.useBestQuality(true);
         if (jumpToFirstPage)
             pageNumber = 0;
